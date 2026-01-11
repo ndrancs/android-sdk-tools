@@ -1,6 +1,7 @@
 name: Build Android SDK Tools
 
 on:
+  workflow_dispatch:
   push:
     tags:
       - 'v*'
@@ -16,8 +17,8 @@ jobs:
         #abi: [armeabi-v7a, arm64-v8a, x86, x86_64]
         abi: [arm64-v8a]
     env:
-      PLATFORM_VERSION: 35.0.2
-      NDK_VERSION: r26b
+      PLATFORM_VERSION: 34.0.5
+      NDK_VERSION: r29
 
     steps:
     - name: Checkout repository
